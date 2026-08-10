@@ -107,6 +107,14 @@ nav a:hover {
 
 /*VIDEO*/
 
+.video {
+    transition: transform 0.3s ease;
+}
+
+.video:hover {
+    transform: scale(1.02);
+}
+
 .video{
     width: 100%;
     max-width: 400px;
@@ -117,6 +125,12 @@ nav a:hover {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.video video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /*****PROGRAMAÇÃO*****/
@@ -137,12 +151,35 @@ nav a:hover {
     justify-content: center;
 }
 
+.info-apresentaçao, .info-cha, .info-cultura, .info-cosplay,
+.info-lojinha, .info-mais {
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-apresentaçao:hover, .info-cha:hover, .info-cultura:hover, .info-cosplay:hover,
+.info-lojinha:hover, .info-mais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: #ffddde;
+}
+
 #Programação img{
     width:100%;
     max-width:300px;
     height:300px;
     object-fit:cover;
     border-radius:5%;
+}
+
+#Programação img {
+    transition: transform 0.3s ease;
+}
+
+.info-apresentaçao:hover img, .info-cha:hover img, .info-cultura:hover img, .info-cosplay:hover img,
+.info-lojinha:hover img, .info-mais:hover img {
+    transform: scale(1.05);
 }
 
 #Programação h2::after{
@@ -177,6 +214,24 @@ nav a:hover {
     background-color: #ffddde;
     border-radius: 15px;
     text-align: center;
+}
+
+.cardapio-fotos figure {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.cardapio-fotos figure:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cardapio-fotos img {
+    transition: transform 0.4s ease;
+}
+
+.cardapio-fotos figure:hover img {
+    transform: scale(1.08);
 }
 
 .cardapio-fotos img {
@@ -279,8 +334,9 @@ form select:focus {
     border-color: #090268;
     box-shadow: 0 0 0 2px rgb(181, 210, 18);
 }
-
+    
 form button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     padding: 10px;
     background: #ca4296;
@@ -292,6 +348,11 @@ form button {
 
 form button:hover {
     box-shadow: 0px 0px 8px #012f03;
+    transform: translateY(-3px);
+}
+
+form button:active {
+    transform: translateY(0);
 }
 
 form h3{
